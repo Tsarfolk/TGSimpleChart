@@ -1,0 +1,705 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7D01BE122235995C003A24C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01BE112235995C003A24C9 /* AppDelegate.swift */; };
+		7D01BE192235995D003A24C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D01BE182235995D003A24C9 /* Assets.xcassets */; };
+		7D01BE1C2235995D003A24C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D01BE1A2235995D003A24C9 /* LaunchScreen.storyboard */; };
+		7D01BE2A22359B4E003A24C9 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01BE2922359B4E003A24C9 /* AppCoordinator.swift */; };
+		7D01BE302235A911003A24C9 /* ChartPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01BE2F2235A911003A24C9 /* ChartPanelViewController.swift */; };
+		7D01BE342235AA08003A24C9 /* chart_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D01BE332235AA08003A24C9 /* chart_data.json */; };
+		7D01BE3722367FB9003A24C9 /* ChartContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01BE3622367FB9003A24C9 /* ChartContainerView.swift */; };
+		7D01BE3A22368046003A24C9 /* ChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01BE3922368046003A24C9 /* ChartModel.swift */; };
+		7D01BE3C223682EF003A24C9 /* ChartPanelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01BE3B223682EF003A24C9 /* ChartPanelViewModel.swift */; };
+		7D01BE3F22368435003A24C9 /* TGColorStyleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01BE3E22368435003A24C9 /* TGColorStyleProtocol.swift */; };
+		7D01BE432236969C003A24C9 /* UIColor+Inits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01BE422236969C003A24C9 /* UIColor+Inits.swift */; };
+		7D01BE482236B610003A24C9 /* UIColor+TGColorsDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01BE462236B610003A24C9 /* UIColor+TGColorsDay.swift */; };
+		7D01BE492236B610003A24C9 /* UIColor+TGColorsNight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01BE472236B610003A24C9 /* UIColor+TGColorsNight.swift */; };
+		7D01BE4C2236F1EC003A24C9 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01BE4B2236F1EC003A24C9 /* Logger.swift */; };
+		7D01BE4E2236F25B003A24C9 /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01BE4D2236F25B003A24C9 /* AppConfigurator.swift */; };
+		7D01BE502236F633003A24C9 /* ChartItemData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01BE4F2236F633003A24C9 /* ChartItemData.swift */; };
+		7D01BE542236FFF4003A24C9 /* ChartContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01BE532236FFF4003A24C9 /* ChartContentViewModel.swift */; };
+		7D01BE5622370382003A24C9 /* ChartYGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01BE5522370382003A24C9 /* ChartYGridView.swift */; };
+		7D01BE58223703DF003A24C9 /* ChartXAxisValuesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01BE57223703DF003A24C9 /* ChartXAxisValuesView.swift */; };
+		7D01BE5A2237040D003A24C9 /* ChartContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01BE592237040D003A24C9 /* ChartContentView.swift */; };
+		7D01BE5C223704E1003A24C9 /* ChartYGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01BE5B223704E1003A24C9 /* ChartYGridViewModel.swift */; };
+		7D01BE5E223704F3003A24C9 /* ChartXAxisValuesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01BE5D223704F3003A24C9 /* ChartXAxisValuesViewModel.swift */; };
+		7D01BE6022370558003A24C9 /* ChartContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01BE5F22370558003A24C9 /* ChartContainerViewModel.swift */; };
+		7D01BE62223708F7003A24C9 /* UIView+AddSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01BE61223708F7003A24C9 /* UIView+AddSubview.swift */; };
+		7D01BE652237ABBC003A24C9 /* TGStyleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01BE642237ABBC003A24C9 /* TGStyleController.swift */; };
+		7D01BE682237AFB8003A24C9 /* Stylable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01BE672237AFB8003A24C9 /* Stylable.swift */; };
+		7D11BAA9223821CB00186EC7 /* UIImage+ as1ptImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D11BAA8223821CB00186EC7 /* UIImage+ as1ptImage.swift */; };
+		7D11BAAB2238400B00186EC7 /* UINavigationController+StatusBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D11BAAA2238400B00186EC7 /* UINavigationController+StatusBarStyle.swift */; };
+		7D11BAAD2238540E00186EC7 /* ChartContainerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D11BAAC2238540E00186EC7 /* ChartContainerViewCell.swift */; };
+		7D11BAAF22391A2300186EC7 /* ChartOverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D11BAAE22391A2300186EC7 /* ChartOverviewView.swift */; };
+		7D11BAB122391A4E00186EC7 /* ChartOverviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D11BAB022391A4E00186EC7 /* ChartOverviewViewModel.swift */; };
+		7D33F1782246699900EA857F /* ChartYGridItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D33F1772246699900EA857F /* ChartYGridItemView.swift */; };
+		7D618B612248132A0040106F /* ChartPanelEmtyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D618B602248132A0040106F /* ChartPanelEmtyCell.swift */; };
+		7D618B6322482F700040106F /* ChartInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D618B6222482F700040106F /* ChartInfoView.swift */; };
+		7D618B65224831030040106F /* ChartInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D618B64224831030040106F /* ChartInfoViewModel.swift */; };
+		7DE6C340223D813900681C5E /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE6C33F223D813900681C5E /* Point.swift */; };
+		7DE6C348223D991600681C5E /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE6C347223D991600681C5E /* ChartView.swift */; };
+		7DE6C34C223ED21600681C5E /* ChartPullControllersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE6C34B223ED21600681C5E /* ChartPullControllersView.swift */; };
+		7DE6C3552241B31600681C5E /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE6C3542241B31600681C5E /* ChartViewModel.swift */; };
+		7DE6C3572241B95900681C5E /* UIChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE6C3562241B95900681C5E /* UIChartModel.swift */; };
+		7DE6C3592241BBCA00681C5E /* BLChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE6C3582241BBCA00681C5E /* BLChartModel.swift */; };
+		7DE6C35D2242700000681C5E /* ChartIntervalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE6C35C2242700000681C5E /* ChartIntervalModel.swift */; };
+		7DE6C35F224284AB00681C5E /* ChartRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE6C35E224284AB00681C5E /* ChartRepository.swift */; };
+		7DE6C361224550A600681C5E /* ValueScaleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE6C360224550A600681C5E /* ValueScaleController.swift */; };
+		7DED0B412237B42C0009A323 /* ChartPanelListItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DED0B402237B42C0009A323 /* ChartPanelListItemType.swift */; };
+		7DED0B432237B49A0009A323 /* ChartLabelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DED0B422237B49A0009A323 /* ChartLabelViewModel.swift */; };
+		7DED0B452237B5B20009A323 /* StyleModeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DED0B442237B5B20009A323 /* StyleModeViewModel.swift */; };
+		7DED0B492237B75C0009A323 /* ChartPanelTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DED0B482237B75C0009A323 /* ChartPanelTitleCell.swift */; };
+		7DED0B4B2237B7B20009A323 /* ChartPanelTitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DED0B4A2237B7B20009A323 /* ChartPanelTitleViewModel.swift */; };
+		7DED0B502237B8970009A323 /* TGFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DED0B4F2237B8970009A323 /* TGFonts.swift */; };
+		7DED0B542237BBB10009A323 /* ChartLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DED0B532237BBB10009A323 /* ChartLabelCell.swift */; };
+		7DED0B572237C6840009A323 /* StyleModeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DED0B562237C6840009A323 /* StyleModeCell.swift */; };
+		7DED0B592237C6B30009A323 /* UICollectionViewCell+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DED0B582237C6B30009A323 /* UICollectionViewCell+Reusable.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7D01BE0E2235995C003A24C9 /* TGSimpleChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TGSimpleChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D01BE112235995C003A24C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7D01BE182235995D003A24C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7D01BE1B2235995D003A24C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7D01BE1D2235995D003A24C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D01BE2922359B4E003A24C9 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		7D01BE2F2235A911003A24C9 /* ChartPanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartPanelViewController.swift; sourceTree = "<group>"; };
+		7D01BE332235AA08003A24C9 /* chart_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = chart_data.json; path = data/chart_data.json; sourceTree = SOURCE_ROOT; };
+		7D01BE3622367FB9003A24C9 /* ChartContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartContainerView.swift; sourceTree = "<group>"; };
+		7D01BE3922368046003A24C9 /* ChartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartModel.swift; sourceTree = "<group>"; };
+		7D01BE3B223682EF003A24C9 /* ChartPanelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartPanelViewModel.swift; sourceTree = "<group>"; };
+		7D01BE3E22368435003A24C9 /* TGColorStyleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TGColorStyleProtocol.swift; sourceTree = "<group>"; };
+		7D01BE422236969C003A24C9 /* UIColor+Inits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Inits.swift"; sourceTree = "<group>"; };
+		7D01BE462236B610003A24C9 /* UIColor+TGColorsDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+TGColorsDay.swift"; sourceTree = "<group>"; };
+		7D01BE472236B610003A24C9 /* UIColor+TGColorsNight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+TGColorsNight.swift"; sourceTree = "<group>"; };
+		7D01BE4B2236F1EC003A24C9 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		7D01BE4D2236F25B003A24C9 /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
+		7D01BE4F2236F633003A24C9 /* ChartItemData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartItemData.swift; sourceTree = "<group>"; };
+		7D01BE532236FFF4003A24C9 /* ChartContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartContentViewModel.swift; sourceTree = "<group>"; };
+		7D01BE5522370382003A24C9 /* ChartYGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartYGridView.swift; sourceTree = "<group>"; };
+		7D01BE57223703DF003A24C9 /* ChartXAxisValuesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartXAxisValuesView.swift; sourceTree = "<group>"; };
+		7D01BE592237040D003A24C9 /* ChartContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartContentView.swift; sourceTree = "<group>"; };
+		7D01BE5B223704E1003A24C9 /* ChartYGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartYGridViewModel.swift; sourceTree = "<group>"; };
+		7D01BE5D223704F3003A24C9 /* ChartXAxisValuesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartXAxisValuesViewModel.swift; sourceTree = "<group>"; };
+		7D01BE5F22370558003A24C9 /* ChartContainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartContainerViewModel.swift; sourceTree = "<group>"; };
+		7D01BE61223708F7003A24C9 /* UIView+AddSubview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AddSubview.swift"; sourceTree = "<group>"; };
+		7D01BE642237ABBC003A24C9 /* TGStyleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TGStyleController.swift; sourceTree = "<group>"; };
+		7D01BE672237AFB8003A24C9 /* Stylable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stylable.swift; sourceTree = "<group>"; };
+		7D11BAA8223821CB00186EC7 /* UIImage+ as1ptImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+ as1ptImage.swift"; sourceTree = "<group>"; };
+		7D11BAAA2238400B00186EC7 /* UINavigationController+StatusBarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+StatusBarStyle.swift"; sourceTree = "<group>"; };
+		7D11BAAC2238540E00186EC7 /* ChartContainerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartContainerViewCell.swift; sourceTree = "<group>"; };
+		7D11BAAE22391A2300186EC7 /* ChartOverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartOverviewView.swift; sourceTree = "<group>"; };
+		7D11BAB022391A4E00186EC7 /* ChartOverviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartOverviewViewModel.swift; sourceTree = "<group>"; };
+		7D33F1772246699900EA857F /* ChartYGridItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartYGridItemView.swift; sourceTree = "<group>"; };
+		7D618B602248132A0040106F /* ChartPanelEmtyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartPanelEmtyCell.swift; sourceTree = "<group>"; };
+		7D618B6222482F700040106F /* ChartInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoView.swift; sourceTree = "<group>"; };
+		7D618B64224831030040106F /* ChartInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoViewModel.swift; sourceTree = "<group>"; };
+		7DE6C33F223D813900681C5E /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		7DE6C347223D991600681C5E /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		7DE6C34B223ED21600681C5E /* ChartPullControllersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartPullControllersView.swift; sourceTree = "<group>"; };
+		7DE6C3542241B31600681C5E /* ChartViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewModel.swift; sourceTree = "<group>"; };
+		7DE6C3562241B95900681C5E /* UIChartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIChartModel.swift; sourceTree = "<group>"; };
+		7DE6C3582241BBCA00681C5E /* BLChartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLChartModel.swift; sourceTree = "<group>"; };
+		7DE6C35C2242700000681C5E /* ChartIntervalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartIntervalModel.swift; sourceTree = "<group>"; };
+		7DE6C35E224284AB00681C5E /* ChartRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartRepository.swift; sourceTree = "<group>"; };
+		7DE6C360224550A600681C5E /* ValueScaleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueScaleController.swift; sourceTree = "<group>"; };
+		7DED0B402237B42C0009A323 /* ChartPanelListItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartPanelListItemType.swift; sourceTree = "<group>"; };
+		7DED0B422237B49A0009A323 /* ChartLabelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartLabelViewModel.swift; sourceTree = "<group>"; };
+		7DED0B442237B5B20009A323 /* StyleModeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleModeViewModel.swift; sourceTree = "<group>"; };
+		7DED0B482237B75C0009A323 /* ChartPanelTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartPanelTitleCell.swift; sourceTree = "<group>"; };
+		7DED0B4A2237B7B20009A323 /* ChartPanelTitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartPanelTitleViewModel.swift; sourceTree = "<group>"; };
+		7DED0B4F2237B8970009A323 /* TGFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TGFonts.swift; sourceTree = "<group>"; };
+		7DED0B532237BBB10009A323 /* ChartLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartLabelCell.swift; sourceTree = "<group>"; };
+		7DED0B562237C6840009A323 /* StyleModeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleModeCell.swift; sourceTree = "<group>"; };
+		7DED0B582237C6B30009A323 /* UICollectionViewCell+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Reusable.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7D01BE0B2235995C003A24C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7D01BE052235995C003A24C9 = {
+			isa = PBXGroup;
+			children = (
+				7D01BE102235995C003A24C9 /* TGSimpleChart */,
+				7D01BE0F2235995C003A24C9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7D01BE0F2235995C003A24C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D01BE0E2235995C003A24C9 /* TGSimpleChart.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7D01BE102235995C003A24C9 /* TGSimpleChart */ = {
+			isa = PBXGroup;
+			children = (
+				7D01BE1D2235995D003A24C9 /* Info.plist */,
+				7D01BE4A2236F1E3003A24C9 /* Utile */,
+				7D01BE402236967A003A24C9 /* Extensions */,
+				7D01BE2322359AE2003A24C9 /* Main */,
+				7D01BE2422359B10003A24C9 /* Modules */,
+				7D01BE322235A9E6003A24C9 /* Resources */,
+			);
+			path = TGSimpleChart;
+			sourceTree = "<group>";
+		};
+		7D01BE2322359AE2003A24C9 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7D01BE112235995C003A24C9 /* AppDelegate.swift */,
+				7D01BE4D2236F25B003A24C9 /* AppConfigurator.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		7D01BE2422359B10003A24C9 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				7D01BE2522359B15003A24C9 /* Shared */,
+				7D01BE2D2235A7EE003A24C9 /* Chart */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		7D01BE2522359B15003A24C9 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				7DE6C344223D872100681C5E /* Model */,
+				7D01BE3D223683FB003A24C9 /* Styles */,
+				7D01BE2622359B1A003A24C9 /* Coordinator */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		7D01BE2622359B1A003A24C9 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				7D01BE2922359B4E003A24C9 /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		7D01BE2D2235A7EE003A24C9 /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				7DE6C33C223D811200681C5E /* Repository */,
+				7D01BE662237AF66003A24C9 /* Protocols */,
+				7D01BE3822368039003A24C9 /* Model */,
+				7D01BE352235AA21003A24C9 /* ViewModel */,
+				7D01BE312235A940003A24C9 /* View */,
+				7D01BE2E2235A8F5003A24C9 /* Controller */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
+		7D01BE2E2235A8F5003A24C9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7D01BE2F2235A911003A24C9 /* ChartPanelViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7D01BE312235A940003A24C9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7DED0B552237C6690009A323 /* StyleMode */,
+				7DED0B472237B7440009A323 /* Title */,
+				7DED0B462237B73B0009A323 /* Chart */,
+				7DED0B512237BB890009A323 /* ChartLabel */,
+				7D618B602248132A0040106F /* ChartPanelEmtyCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7D01BE322235A9E6003A24C9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7D01BE332235AA08003A24C9 /* chart_data.json */,
+				7D01BE1A2235995D003A24C9 /* LaunchScreen.storyboard */,
+				7D01BE182235995D003A24C9 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7D01BE352235AA21003A24C9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7D01BE3B223682EF003A24C9 /* ChartPanelViewModel.swift */,
+				7D01BE5F22370558003A24C9 /* ChartContainerViewModel.swift */,
+				7D01BE532236FFF4003A24C9 /* ChartContentViewModel.swift */,
+				7D618B64224831030040106F /* ChartInfoViewModel.swift */,
+				7D01BE5B223704E1003A24C9 /* ChartYGridViewModel.swift */,
+				7D01BE5D223704F3003A24C9 /* ChartXAxisValuesViewModel.swift */,
+				7DED0B422237B49A0009A323 /* ChartLabelViewModel.swift */,
+				7DED0B442237B5B20009A323 /* StyleModeViewModel.swift */,
+				7DED0B4A2237B7B20009A323 /* ChartPanelTitleViewModel.swift */,
+				7D11BAB022391A4E00186EC7 /* ChartOverviewViewModel.swift */,
+				7DE6C3542241B31600681C5E /* ChartViewModel.swift */,
+				7DE6C360224550A600681C5E /* ValueScaleController.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7D01BE3822368039003A24C9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7D01BE3922368046003A24C9 /* ChartModel.swift */,
+				7D01BE4F2236F633003A24C9 /* ChartItemData.swift */,
+				7DED0B402237B42C0009A323 /* ChartPanelListItemType.swift */,
+				7DE6C33F223D813900681C5E /* Point.swift */,
+				7DE6C3562241B95900681C5E /* UIChartModel.swift */,
+				7DE6C3582241BBCA00681C5E /* BLChartModel.swift */,
+				7DE6C35C2242700000681C5E /* ChartIntervalModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7D01BE3D223683FB003A24C9 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				7D01BE3E22368435003A24C9 /* TGColorStyleProtocol.swift */,
+				7D01BE642237ABBC003A24C9 /* TGStyleController.swift */,
+				7DED0B4F2237B8970009A323 /* TGFonts.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		7D01BE402236967A003A24C9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7D01BE4122369681003A24C9 /* UI */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7D01BE4122369681003A24C9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7D01BE462236B610003A24C9 /* UIColor+TGColorsDay.swift */,
+				7D01BE472236B610003A24C9 /* UIColor+TGColorsNight.swift */,
+				7D01BE422236969C003A24C9 /* UIColor+Inits.swift */,
+				7D01BE61223708F7003A24C9 /* UIView+AddSubview.swift */,
+				7DED0B582237C6B30009A323 /* UICollectionViewCell+Reusable.swift */,
+				7D11BAA8223821CB00186EC7 /* UIImage+ as1ptImage.swift */,
+				7D11BAAA2238400B00186EC7 /* UINavigationController+StatusBarStyle.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		7D01BE4A2236F1E3003A24C9 /* Utile */ = {
+			isa = PBXGroup;
+			children = (
+				7D01BE4B2236F1EC003A24C9 /* Logger.swift */,
+			);
+			path = Utile;
+			sourceTree = "<group>";
+		};
+		7D01BE662237AF66003A24C9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7D01BE672237AFB8003A24C9 /* Stylable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		7DE6C33C223D811200681C5E /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				7DE6C35E224284AB00681C5E /* ChartRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		7DE6C344223D872100681C5E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7DE6C34D22400D0500681C5E /* Overview */ = {
+			isa = PBXGroup;
+			children = (
+				7D11BAAE22391A2300186EC7 /* ChartOverviewView.swift */,
+				7DE6C34B223ED21600681C5E /* ChartPullControllersView.swift */,
+				7DE6C347223D991600681C5E /* ChartView.swift */,
+			);
+			path = Overview;
+			sourceTree = "<group>";
+		};
+		7DED0B462237B73B0009A323 /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				7DE6C34D22400D0500681C5E /* Overview */,
+				7D11BAAC2238540E00186EC7 /* ChartContainerViewCell.swift */,
+				7D01BE3622367FB9003A24C9 /* ChartContainerView.swift */,
+				7D01BE5522370382003A24C9 /* ChartYGridView.swift */,
+				7D33F1772246699900EA857F /* ChartYGridItemView.swift */,
+				7D01BE57223703DF003A24C9 /* ChartXAxisValuesView.swift */,
+				7D01BE592237040D003A24C9 /* ChartContentView.swift */,
+				7D618B6222482F700040106F /* ChartInfoView.swift */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
+		7DED0B472237B7440009A323 /* Title */ = {
+			isa = PBXGroup;
+			children = (
+				7DED0B482237B75C0009A323 /* ChartPanelTitleCell.swift */,
+			);
+			path = Title;
+			sourceTree = "<group>";
+		};
+		7DED0B512237BB890009A323 /* ChartLabel */ = {
+			isa = PBXGroup;
+			children = (
+				7DED0B532237BBB10009A323 /* ChartLabelCell.swift */,
+			);
+			path = ChartLabel;
+			sourceTree = "<group>";
+		};
+		7DED0B552237C6690009A323 /* StyleMode */ = {
+			isa = PBXGroup;
+			children = (
+				7DED0B562237C6840009A323 /* StyleModeCell.swift */,
+			);
+			path = StyleMode;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7D01BE0D2235995C003A24C9 /* TGSimpleChart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D01BE202235995D003A24C9 /* Build configuration list for PBXNativeTarget "TGSimpleChart" */;
+			buildPhases = (
+				7D01BE0A2235995C003A24C9 /* Sources */,
+				7D01BE0B2235995C003A24C9 /* Frameworks */,
+				7D01BE0C2235995C003A24C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TGSimpleChart;
+			productName = TGSimpleChart;
+			productReference = 7D01BE0E2235995C003A24C9 /* TGSimpleChart.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7D01BE062235995C003A24C9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Mikhail Maslo";
+				TargetAttributes = {
+					7D01BE0D2235995C003A24C9 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 7D01BE092235995C003A24C9 /* Build configuration list for PBXProject "TGSimpleChart" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7D01BE052235995C003A24C9;
+			productRefGroup = 7D01BE0F2235995C003A24C9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7D01BE0D2235995C003A24C9 /* TGSimpleChart */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7D01BE0C2235995C003A24C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D01BE1C2235995D003A24C9 /* LaunchScreen.storyboard in Resources */,
+				7D01BE192235995D003A24C9 /* Assets.xcassets in Resources */,
+				7D01BE342235AA08003A24C9 /* chart_data.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7D01BE0A2235995C003A24C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D01BE542236FFF4003A24C9 /* ChartContentViewModel.swift in Sources */,
+				7D01BE5622370382003A24C9 /* ChartYGridView.swift in Sources */,
+				7D01BE5C223704E1003A24C9 /* ChartYGridViewModel.swift in Sources */,
+				7DE6C35D2242700000681C5E /* ChartIntervalModel.swift in Sources */,
+				7D01BE652237ABBC003A24C9 /* TGStyleController.swift in Sources */,
+				7D01BE2A22359B4E003A24C9 /* AppCoordinator.swift in Sources */,
+				7D01BE4C2236F1EC003A24C9 /* Logger.swift in Sources */,
+				7D01BE302235A911003A24C9 /* ChartPanelViewController.swift in Sources */,
+				7D01BE5A2237040D003A24C9 /* ChartContentView.swift in Sources */,
+				7D01BE122235995C003A24C9 /* AppDelegate.swift in Sources */,
+				7DED0B592237C6B30009A323 /* UICollectionViewCell+Reusable.swift in Sources */,
+				7DED0B4B2237B7B20009A323 /* ChartPanelTitleViewModel.swift in Sources */,
+				7DED0B492237B75C0009A323 /* ChartPanelTitleCell.swift in Sources */,
+				7D618B6322482F700040106F /* ChartInfoView.swift in Sources */,
+				7D01BE3722367FB9003A24C9 /* ChartContainerView.swift in Sources */,
+				7D01BE502236F633003A24C9 /* ChartItemData.swift in Sources */,
+				7D01BE492236B610003A24C9 /* UIColor+TGColorsNight.swift in Sources */,
+				7DE6C3572241B95900681C5E /* UIChartModel.swift in Sources */,
+				7D11BAA9223821CB00186EC7 /* UIImage+ as1ptImage.swift in Sources */,
+				7DE6C340223D813900681C5E /* Point.swift in Sources */,
+				7DE6C361224550A600681C5E /* ValueScaleController.swift in Sources */,
+				7D618B612248132A0040106F /* ChartPanelEmtyCell.swift in Sources */,
+				7DED0B572237C6840009A323 /* StyleModeCell.swift in Sources */,
+				7D33F1782246699900EA857F /* ChartYGridItemView.swift in Sources */,
+				7D01BE3F22368435003A24C9 /* TGColorStyleProtocol.swift in Sources */,
+				7D01BE682237AFB8003A24C9 /* Stylable.swift in Sources */,
+				7D11BAAD2238540E00186EC7 /* ChartContainerViewCell.swift in Sources */,
+				7D01BE58223703DF003A24C9 /* ChartXAxisValuesView.swift in Sources */,
+				7D01BE432236969C003A24C9 /* UIColor+Inits.swift in Sources */,
+				7D11BAAF22391A2300186EC7 /* ChartOverviewView.swift in Sources */,
+				7D01BE4E2236F25B003A24C9 /* AppConfigurator.swift in Sources */,
+				7D01BE6022370558003A24C9 /* ChartContainerViewModel.swift in Sources */,
+				7D01BE62223708F7003A24C9 /* UIView+AddSubview.swift in Sources */,
+				7DE6C34C223ED21600681C5E /* ChartPullControllersView.swift in Sources */,
+				7D01BE3C223682EF003A24C9 /* ChartPanelViewModel.swift in Sources */,
+				7DE6C35F224284AB00681C5E /* ChartRepository.swift in Sources */,
+				7D01BE5E223704F3003A24C9 /* ChartXAxisValuesViewModel.swift in Sources */,
+				7DED0B542237BBB10009A323 /* ChartLabelCell.swift in Sources */,
+				7DED0B452237B5B20009A323 /* StyleModeViewModel.swift in Sources */,
+				7DED0B502237B8970009A323 /* TGFonts.swift in Sources */,
+				7DE6C3592241BBCA00681C5E /* BLChartModel.swift in Sources */,
+				7D11BAAB2238400B00186EC7 /* UINavigationController+StatusBarStyle.swift in Sources */,
+				7D11BAB122391A4E00186EC7 /* ChartOverviewViewModel.swift in Sources */,
+				7D01BE3A22368046003A24C9 /* ChartModel.swift in Sources */,
+				7DE6C3552241B31600681C5E /* ChartViewModel.swift in Sources */,
+				7DED0B412237B42C0009A323 /* ChartPanelListItemType.swift in Sources */,
+				7DE6C348223D991600681C5E /* ChartView.swift in Sources */,
+				7DED0B432237B49A0009A323 /* ChartLabelViewModel.swift in Sources */,
+				7D01BE482236B610003A24C9 /* UIColor+TGColorsDay.swift in Sources */,
+				7D618B65224831030040106F /* ChartInfoViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7D01BE1A2235995D003A24C9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D01BE1B2235995D003A24C9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7D01BE1E2235995D003A24C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7D01BE1F2235995D003A24C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7D01BE212235995D003A24C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J9TJK5HN3Q;
+				INFOPLIST_FILE = TGSimpleChart/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mikhailmaslo.TGSimpleChart;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7D01BE222235995D003A24C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J9TJK5HN3Q;
+				INFOPLIST_FILE = TGSimpleChart/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mikhailmaslo.TGSimpleChart;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7D01BE092235995C003A24C9 /* Build configuration list for PBXProject "TGSimpleChart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D01BE1E2235995D003A24C9 /* Debug */,
+				7D01BE1F2235995D003A24C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D01BE202235995D003A24C9 /* Build configuration list for PBXNativeTarget "TGSimpleChart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D01BE212235995D003A24C9 /* Debug */,
+				7D01BE222235995D003A24C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7D01BE062235995C003A24C9 /* Project object */;
+}
