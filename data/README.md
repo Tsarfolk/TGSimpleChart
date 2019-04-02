@@ -27,6 +27,8 @@ chart.colors – Color for each line in 6-hex-digit format (e.g. "#AAAAAA").
 chart.names – Names for each line.
 ```
 
+![](http://i.imgur.com/OUkLi.gif)
+
 ## Description
 
 ```
