@@ -2,6 +2,7 @@ import Foundation
 
 class ChartXAxisValuesViewModel {
     private let calendar = Calendar.current
+    private lazy var baseNumberOfPoints: Double = { return Double(3.5) }()
     private let model: ChartModel
     private let repository: ChartRepository
     private let viewWidth: Double
@@ -10,10 +11,9 @@ class ChartXAxisValuesViewModel {
     var style: TGColorStyleProtocol { return styleController.style }
     private let styleController: TGStyleController
     
-    private var anchorDate: Date?
     
     var itemsUpdated: (() -> Void)?
-    private(set) var items: [DateItem] = [] {
+    private(set) var items: [XDateItem] = [] {
         didSet {
             itemsUpdated?()
         }
@@ -26,15 +26,7 @@ class ChartXAxisValuesViewModel {
     }()
     
     private var dates: [Date] = []
-    private var lastDateIndex: Int = 0
-    
-    struct DateItem {
-        let position: Double
-        let date: Date
-        let alpha: Double
-        
-        var title: String = ""
-    }
+    private var lastDateIndex: Int
     
     init(model: ChartModel,
          viewWidth: Double,
@@ -44,10 +36,10 @@ class ChartXAxisValuesViewModel {
         self.viewWidth = viewWidth
         self.model = model
         self.styleController = styleController
+        self.lastDateIndex = model.x.values.count - 1
         
         calculateDates()
         setupBindings()
-        updateDateItemsAlternative2()
     }
     
     private func calculateDates() {
@@ -63,84 +55,39 @@ class ChartXAxisValuesViewModel {
         }
         
         self.dates = dates
+        self.items = dates.map { (date) -> XDateItem in
+            return XDateItem(date: date, df: dateFormatter, viewWidth: viewWidth)
+        }
     }
     
     private func setupBindings() {
         interval.subscribeOnBoundsChange { [weak self] (_) in
             guard let sSelf = self else { return }
             
-            sSelf.updateDateItemsAlternative2()
+            sSelf.updateDateItemsAlternative(isInitial: false)
         }
     }
     
-    private let baseNumberOfPoints: Double = 5
-    
-    private func updateDateItemsAlternative2() {
+    func updateDateItemsAlternative(isInitial: Bool) {
+        let leftIndex = isInitial ? 0 : min(interval.leftIndex - 30, 0)
+        let rightIndex = isInitial ? items.count - 1: max(interval.rightIndex + 30, items.count - 1)
         let numberOfCurrentPoints = Double(interval.rightIndex - interval.leftIndex)
         let scale = log2(max(numberOfCurrentPoints, baseNumberOfPoints) / baseNumberOfPoints)
-        let intStep = Int(pow(2, scale))
-        let alpha: Double = 1
+        let intStep = Int(pow(2, Double(Int(scale))))
         
+        print(numberOfCurrentPoints, baseNumberOfPoints, scale, intStep)
         let leftBound = interval.leftXBound
         let rightBound = interval.rightXBound
         let range = rightBound - leftBound
-        let modOffset: Int = 0
         
-        var direction: Int = 1
-        while !(leftBound...rightBound~=dates[lastDateIndex].timeIntervalSince1970) {
-            if dates[lastDateIndex].timeIntervalSince1970 < leftBound {
-                lastDateIndex += 1
-                direction = 1
-            } else {
-                lastDateIndex -= 1
-                direction = -1
-            }
+        for i in leftIndex...rightIndex where 0..<items.count~=i {
+            let item = items[i]
+            let date = item.date
+            let position = ((date.timeIntervalSince1970 - leftBound) / range) * viewWidth
+            item.updateState(position: position, shouldBeVisible: i % intStep == 0)
         }
         
-        let lastValidIndex: Int = lastDateIndex
-        while lastDateIndex % intStep != modOffset {
-            lastDateIndex += direction
-        }
-        
-        if !(0..<dates.count~=lastDateIndex) {
-            lastDateIndex = lastValidIndex
-            return
-        }
-        
-        var items: [DateItem] = []
-        
-        for i in [1, -1] {
-            let offset = intStep * -i
-            var index = lastDateIndex
-            let bound = i == 1 ? leftBound - daySeconds * 4 : rightBound
-            while (dates[index].timeIntervalSince1970 - bound) * Double(i) >= 0 {
-                let date = dates[index]
-                let position = ((date.timeIntervalSince1970 - leftBound) / range - 0.5) * viewWidth
-                let item = ChartXAxisValuesViewModel.DateItem(position: position,
-                                                              date: date,
-                                                              alpha: alpha,
-                                                              title: dateFormatter.string(from: date))
-                items.append(item)
-                index += offset
-                if !(0..<dates.count~=index) {
-                    break
-                }
-            }
-        }
-        
-        self.items = items.sorted { $0.date < $1.date }
-    }
-
-    // pow & alpha
-    private func powOf2(number: Double) -> Int {
-        var current: Double = 1
-        var counter: Int = 0
-        while current <= number {
-            current *= 2
-            counter += 1
-        }
-        
-        return counter
+        itemsUpdated?()
     }
 }
 

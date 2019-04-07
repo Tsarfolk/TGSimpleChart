@@ -83,6 +83,7 @@ class ChartOverviewViewModel {
     private func updateActiveBounds(by coordinates: Range<Double>, pullingType: ChartPullControllerType) {
         let leftBound = max(0, coordinates.lowerBound)
         let rightBound = min(viewWidth, coordinates.upperBound)
+        guard rightBound - basisFocusWindowWidth + 0.1 >= leftBound else { return }
         var actualCoordinates = leftBound..<rightBound
         switch pullingType {
         case .center:

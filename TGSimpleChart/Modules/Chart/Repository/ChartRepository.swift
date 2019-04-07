@@ -1,7 +1,6 @@
 import Foundation
 
 class ChartRepository {
-    var minimumNumberOfPoints = 5
     private static let basicWidthPercentage = 0.1
     
     let interval: ChartIntervalModel
@@ -28,25 +27,17 @@ class ChartRepository {
          graphicScaleController: ValueScaleController) {
         var interval: ChartIntervalModel
         let xPoints = chartModel.x.values.map { Double($0) }
-        let basicWidth = viewWidth * ChartRepository.basicWidthPercentage
-        let rightBound = xPoints.last ?? .greatestFiniteMagnitude
-        if xPoints.count > minimumNumberOfPoints {
-            let leftBound = xPoints[xPoints.count - minimumNumberOfPoints]
-            let pointsMinX = xPoints.first!
-            let pointsMaxX = xPoints.last!
-            let range = pointsMaxX - pointsMinX
-            let percentage = (pointsMaxX - leftBound) / range
-            
-            basicBoundWidth = viewWidth * percentage
-            interval = ChartIntervalModel(xPoints: xPoints,
-                                          leftBound: leftBound,
-                                          rightBound: rightBound)
-        } else {
-            basicBoundWidth = basicWidth
-            interval = ChartIntervalModel(xPoints: xPoints,
-                                          leftBound: xPoints.first ?? 0,
-                                          rightBound: rightBound)
-        }
+        
+        let pointsMinX = xPoints.first!
+        let pointsMaxX = xPoints.last!
+        let xRange = pointsMaxX - pointsMinX
+        let rBound = pointsMaxX
+        let lBound = rBound - (1 - ChartRepository.basicWidthPercentage) * xRange
+        
+        basicBoundWidth = viewWidth * ChartRepository.basicWidthPercentage
+        interval = ChartIntervalModel(xPoints: xPoints,
+                                      leftBound: lBound,
+                                      rightBound: rBound)
         chartModels = chartModel.charts
             .map { (chartItemData) in
             return BLChartModel(xPoints: xPoints,
