@@ -68,8 +68,8 @@ class ChartPullControllersView: UIView, Stylable {
         NSLayoutConstraint.activate([
             leftArrowImageView.centerXAnchor.constraint(equalTo: leftView.centerXAnchor),
             leftArrowImageView.centerYAnchor.constraint(equalTo: leftView.centerYAnchor),
-            leftArrowImageView.widthAnchor.constraint(equalToConstant: 20),
-            leftArrowImageView.heightAnchor.constraint(equalToConstant: 20)
+            leftArrowImageView.widthAnchor.constraint(equalToConstant: 14.5),
+            leftArrowImageView.heightAnchor.constraint(equalToConstant: 14.5)
             ])
         
         rightView.addSubviews([rightArrowImageView])
@@ -78,8 +78,8 @@ class ChartPullControllersView: UIView, Stylable {
         NSLayoutConstraint.activate([
             rightArrowImageView.centerXAnchor.constraint(equalTo: rightView.centerXAnchor),
             rightArrowImageView.centerYAnchor.constraint(equalTo: rightView.centerYAnchor),
-            rightArrowImageView.widthAnchor.constraint(equalToConstant: 20),
-            rightArrowImageView.heightAnchor.constraint(equalToConstant: 20)
+            rightArrowImageView.widthAnchor.constraint(equalToConstant: 14.5),
+            rightArrowImageView.heightAnchor.constraint(equalToConstant: 14.5)
             ])
     }
     

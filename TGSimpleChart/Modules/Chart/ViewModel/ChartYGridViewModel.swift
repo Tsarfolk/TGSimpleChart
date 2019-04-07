@@ -83,7 +83,7 @@ class ChartYGridViewModel {
     private func formated(doubleValue: Double) -> String {
         let intValue = Int(doubleValue)
         if intValue > 999_999 {
-            let firstPart = "\(intValue / 1000_000).\(intValue % 1000_000 / 10000)KK"
+            let firstPart = "\(intValue / 1000_000).\(intValue % 1000_000 / 10000)M"
             return firstPart
         }
         if intValue > 999 {

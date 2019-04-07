@@ -73,23 +73,6 @@ class ChartPanelViewController: UIViewController, Stylable {
         viewModel.styleChanged = { [weak self] in
             guard let sSelf = self else { return }
             
-//            var queue: [UIView] = [sSelf.view] + sSelf.collectionView.visibleCells.map { $0.contentView }
-//            var stylable: [UIView] = []
-//            while !queue.isEmpty {
-//                let elem = queue.removeLast()
-//                let stylableViews = elem.subviews
-//                queue.append(contentsOf: stylableViews)
-//                stylable.append(contentsOf: stylableViews.filter { $0 is Stylable })
-//            }
-//
-//            let colorClosures = stylable
-//                .lazy
-//                .compactMap { $0 as? Stylable }
-//                .map { $0.styleActions }
-//                .joined()
-//
-//            // can be animated
-//            colorClosures.forEach { $0() }
             sSelf.applyThemeForStylable(view: sSelf.view)
             sSelf.applyTheme()
         }
@@ -148,13 +131,13 @@ extension ChartPanelViewController: UICollectionViewDelegateFlowLayout {
         let item = getItem(for: indexPath)
         switch item {
         case .title:
-            return CGSize(width: collectionViewSize.width, height: 45)
+            return CGSize(width: collectionViewSize.width, height: 30)
         case .chart:
-            return CGSize(width: collectionViewSize.width, height: 560)
+            return CGSize(width: collectionViewSize.width, height: 373)
         case .label:
-            return CGSize(width: collectionViewSize.width, height: 75)
+            return CGSize(width: collectionViewSize.width, height: 50)
         case .styleMode:
-            return CGSize(width: collectionViewSize.width, height: 70)
+            return CGSize(width: collectionViewSize.width, height: 46)
         case .emptyCell(let height):
             return CGSize(width: collectionViewSize.width, height: CGFloat(height))
         }

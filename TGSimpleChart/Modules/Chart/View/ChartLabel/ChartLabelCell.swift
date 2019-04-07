@@ -63,7 +63,7 @@ class ChartLabelCell: UICollectionViewCell, Stylable {
         }
         
         updateUISelectedState()
-        leftOffsetSeparatorConstraint?.constant = viewModel.isSeparatorEdgeToEdge ? 0 : 67
+        leftOffsetSeparatorConstraint?.constant = viewModel.isSeparatorEdgeToEdge ? 0 : 45
         colorRectangleView.backgroundColor = UIColor(hex: viewModel.colorHex)
         titleLabel.text = viewModel.title
         
@@ -75,15 +75,15 @@ class ChartLabelCell: UICollectionViewCell, Stylable {
         
         // colorRectangleView
         NSLayoutConstraint.activate([
-            colorRectangleView.heightAnchor.constraint(equalToConstant: 18),
-            colorRectangleView.widthAnchor.constraint(equalToConstant: 18),
-            colorRectangleView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 24),
+            colorRectangleView.heightAnchor.constraint(equalToConstant: 12),
+            colorRectangleView.widthAnchor.constraint(equalToConstant: 12),
+            colorRectangleView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 16.6),
             colorRectangleView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
             ])
         
         // titleLabel
         NSLayoutConstraint.activate([
-            titleLabel.leftAnchor.constraint(equalTo: colorRectangleView.rightAnchor, constant: 25),
+            titleLabel.leftAnchor.constraint(equalTo: colorRectangleView.rightAnchor, constant: 16.6),
             titleLabel.centerYAnchor.constraint(equalTo: colorRectangleView.centerYAnchor)
             ])
         
@@ -100,9 +100,9 @@ class ChartLabelCell: UICollectionViewCell, Stylable {
         // checkmark
         checkMarkImageView.image = checkMarkImage
         NSLayoutConstraint.activate([
-            checkMarkImageView.heightAnchor.constraint(equalToConstant: 15),
-            checkMarkImageView.widthAnchor.constraint(equalToConstant: 18),
-            checkMarkImageView.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -25),
+            checkMarkImageView.heightAnchor.constraint(equalToConstant: 10),
+            checkMarkImageView.widthAnchor.constraint(equalToConstant: 12),
+            checkMarkImageView.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -16.6),
             checkMarkImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
             ])
         

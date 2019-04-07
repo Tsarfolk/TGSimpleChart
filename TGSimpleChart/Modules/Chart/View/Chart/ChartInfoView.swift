@@ -73,12 +73,12 @@ class ChartInfoView: UIView, Stylable {
                 labels.append(label)
                 
                 NSLayoutConstraint.activate([
-                    label.rightAnchor.constraint(equalTo: rightAnchor, constant: -15),
+                    label.rightAnchor.constraint(equalTo: rightAnchor, constant: -10),
                     label.topAnchor.constraint(equalTo: previousConstraint, constant: offset)
                     ])
                 
                 previousConstraint = label.bottomAnchor
-                offset = 12.5
+                offset = 8.5
             }
         }
         
@@ -96,13 +96,13 @@ class ChartInfoView: UIView, Stylable {
         addSubviews([dateLabel, yearLabel])
         
         NSLayoutConstraint.activate([
-            dateLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 15),
-            dateLabel.topAnchor.constraint(equalTo: topAnchor, constant: 12.5)
+            dateLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 10),
+            dateLabel.topAnchor.constraint(equalTo: topAnchor, constant: 8.5)
             ])
         
         NSLayoutConstraint.activate([
-            yearLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 15),
-            yearLabel.topAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: 11)
+            yearLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 10),
+            yearLabel.topAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: 7.3)
             ])
     }
 }

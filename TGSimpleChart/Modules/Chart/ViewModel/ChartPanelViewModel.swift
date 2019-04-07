@@ -38,8 +38,8 @@ class ChartPanelViewModel {
                 .compactMap { (json) in
                     return ChartModel(json: json)
                 }.map { (chartModel) -> [ChartPanelListItemType] in
-                    let graphicHeight: Double = 440
-                    let overviewHeight: Double = 57
+                    let graphicHeight: Double = 293
+                    let overviewHeight: Double = 38
                     let titleViewModel = ChartPanelTitleViewModel(chartModel: chartModel, styleController: styleController)
                     let graphicScaleController = ValueScaleController()
                     let chartLabelViewModels = chartModel.charts
