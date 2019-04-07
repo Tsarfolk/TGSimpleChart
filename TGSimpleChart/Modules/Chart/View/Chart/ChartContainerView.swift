@@ -47,15 +47,15 @@ class ChartContainerView: UIView, Stylable {
             contentView.leftAnchor.constraint(equalTo: leftAnchor, constant: horizontalInset),
             contentView.rightAnchor.constraint(equalTo: rightAnchor, constant: -horizontalInset),
             contentView.topAnchor.constraint(equalTo: topAnchor),
-            contentView.heightAnchor.constraint(equalToConstant: 475)
+            contentView.heightAnchor.constraint(equalToConstant: 316.6)
             ])
         
         overviewView.backgroundColor = .yellow
         NSLayoutConstraint.activate([
             overviewView.leftAnchor.constraint(equalTo: contentView.leftAnchor),
             overviewView.rightAnchor.constraint(equalTo: contentView.rightAnchor),
-            overviewView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -19),
-            overviewView.topAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 9)
+            overviewView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -12.6),
+            overviewView.topAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 6)
             ])
         
         contentView.addSubviews([xAxisView, yGridView, chartView])
@@ -64,7 +64,7 @@ class ChartContainerView: UIView, Stylable {
             xAxisView.leftAnchor.constraint(equalTo: contentView.leftAnchor),
             xAxisView.rightAnchor.constraint(equalTo: contentView.rightAnchor),
             xAxisView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            xAxisView.heightAnchor.constraint(equalToConstant: 39)
+            xAxisView.heightAnchor.constraint(equalToConstant: 26)
             ])
         
         NSLayoutConstraint.activate([

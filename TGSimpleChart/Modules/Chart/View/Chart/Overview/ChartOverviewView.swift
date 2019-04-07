@@ -4,7 +4,7 @@ class ChartOverviewView: UIView, Stylable {
     internal var styleActions: [() -> Void] = []
     
     private let focusOverlayVerticalInsets: CGFloat = 3.5
-    private let focusOvalViewHorizontalWidth: CGFloat = 16
+    private let focusOvalViewHorizontalWidth: CGFloat = 10.6
     
     private lazy var chartFocusView = UIView()
     //    private let leftControllerView:

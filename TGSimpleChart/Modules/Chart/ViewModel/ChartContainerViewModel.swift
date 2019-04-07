@@ -8,7 +8,7 @@ class ChartContainerViewModel {
     var style: TGColorStyleProtocol { return styleController.style }
     private let styleController: TGStyleController
     
-    static let leftInset: Double = 24
+    static let leftInset: Double = 16
     
     init(contentViewModel: ChartContentViewModel,
          yGridViewModel: ChartYGridViewModel,

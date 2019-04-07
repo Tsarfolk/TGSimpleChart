@@ -15,6 +15,8 @@ class ChartYGridView: UIView, Stylable {
         self.viewModel = viewModel
         super.init(frame: .zero)
         
+        layer.masksToBounds = true
+        
         setViews()
         updateViews()
         setupBindings()
@@ -42,7 +44,7 @@ class ChartYGridView: UIView, Stylable {
     }
     
     private func updateViews() {
-        let distance: Double = 50
+        let distance: Double = 26.1
         let initialOffset = CGFloat(viewModel.direction?.appearanceOffset ?? distance)
         
         let removingViews = activeViews
