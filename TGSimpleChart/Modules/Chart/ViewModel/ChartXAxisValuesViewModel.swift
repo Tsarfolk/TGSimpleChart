@@ -10,7 +10,6 @@ class ChartXAxisValuesViewModel {
     var style: TGColorStyleProtocol { return styleController.style }
     private let styleController: TGStyleController
     
-    var doubleScale: Double { return repository.xScale }
     private var anchorDate: Date?
     
     var itemsUpdated: (() -> Void)?
@@ -48,7 +47,7 @@ class ChartXAxisValuesViewModel {
         
         calculateDates()
         setupBindings()
-        updateDateItemsAlternative()
+        updateDateItemsAlternative2()
     }
     
     private func calculateDates() {
@@ -70,20 +69,19 @@ class ChartXAxisValuesViewModel {
         interval.subscribeOnBoundsChange { [weak self] (_) in
             guard let sSelf = self else { return }
             
-            sSelf.updateDateItemsAlternative()
+            sSelf.updateDateItemsAlternative2()
         }
     }
     
-    private func updateDateItemsAlternative() {
-        let powValue = powOf2(number: doubleScale)
-        let addition = repository.minimumNumberOfPoints > 32 ? 1 : 0
-        let step = (pow(2, powValue + 2 + addition) as NSNumber).intValue
-        let sPowValue = (pow(2.0, powValue - 1) as NSNumber).doubleValue
-        let ePowValue = (pow(2.0, powValue) as NSNumber).doubleValue
-        let alpha = (ePowValue - doubleScale) / (ePowValue - sPowValue)
+    private let baseNumberOfPoints: Double = 5
     
+    private func updateDateItemsAlternative2() {
+        let numberOfCurrentPoints = Double(interval.rightIndex - interval.leftIndex)
+        let scale = log2(max(numberOfCurrentPoints, baseNumberOfPoints) / baseNumberOfPoints)
+        let intStep = Int(pow(2, scale))
+        let alpha: Double = 1
+        
         let leftBound = interval.leftXBound
-        let dayGap = step / 2
         let rightBound = interval.rightXBound
         let range = rightBound - leftBound
         let modOffset: Int = 0
@@ -100,7 +98,7 @@ class ChartXAxisValuesViewModel {
         }
         
         let lastValidIndex: Int = lastDateIndex
-        while dayGap > 1, lastDateIndex % dayGap != modOffset {
+        while lastDateIndex % intStep != modOffset {
             lastDateIndex += direction
         }
         
@@ -112,13 +110,11 @@ class ChartXAxisValuesViewModel {
         var items: [DateItem] = []
         
         for i in [1, -1] {
-            let offset = dayGap * -i
+            let offset = intStep * -i
             var index = lastDateIndex
             let bound = i == 1 ? leftBound - daySeconds * 4 : rightBound
             while (dates[index].timeIntervalSince1970 - bound) * Double(i) >= 0 {
                 let date = dates[index]
-                let alpha = index % step == modOffset ? 1.0 : alpha * alpha
-//                print(alpha)
                 let position = ((date.timeIntervalSince1970 - leftBound) / range - 0.5) * viewWidth
                 let item = ChartXAxisValuesViewModel.DateItem(position: position,
                                                               date: date,
@@ -134,7 +130,7 @@ class ChartXAxisValuesViewModel {
         
         self.items = items.sorted { $0.date < $1.date }
     }
-    
+
     // pow & alpha
     private func powOf2(number: Double) -> Int {
         var current: Double = 1
